@@ -1,0 +1,9 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #0f172a; /* Equivalent to bg-slate-950 */
+  background-image: radial-gradient(circle farthest-side, rgba(255,0,182,.15), rgba(255,255,255,0));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow: hidden;
+}
