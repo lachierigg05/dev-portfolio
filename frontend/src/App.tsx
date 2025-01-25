@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import DevProfileCard from "./components/DevProfileCard.tsx";
 import '../index.css'
+import ProjectsCard from "./components/ProjectsCard.tsx";
 
 const App: React.FC = () => {
   useEffect(() => {
@@ -19,8 +20,9 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div>
+    <div className="w-full h-full flex justify-start">
       <DevProfileCard />
+      <ProjectsCard />
       <div id="flashlight" className="flashlight"></div>
     </div>
   );
