@@ -10,4 +10,20 @@
         font-display: swap;
         src: url("./assets/fonts/Roboto/static/Roboto-Regular.ttf") format('ttf');
     }
+
+    @font-face {
+        font-family: Popsies;
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url('./assets/fonts/Popsies/Popsies.ttf') format('ttf');
+    }
+}
+
+.font-roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+.font-popsies {
+    font-family: 'Popsies', sans-serif;
 }
