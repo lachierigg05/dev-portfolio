@@ -28,10 +28,7 @@ public class GithubService {
     public List<Repository> getRepositories(String username) {
         String url = String.format("https://api.github.com/users/%s/repos", username);
 
-        HttpHeaders headers = new HttpHeaders();
-        headers.set("Authorization", "Bearer " + githubToken);
-
-        HttpEntity<List<Repository>> entity = new HttpEntity<>(headers);
+        HttpEntity<List<Repository>> entity = new HttpEntity<>();
         ResponseEntity<List<Repository>> response = restTemplate.exchange(
                 url,
                 HttpMethod.GET,
