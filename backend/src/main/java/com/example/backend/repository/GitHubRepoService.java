@@ -23,12 +23,12 @@ public class GitHubRepoService {
     // TODO - Add scheduled task for deployment -> @Scheduled(fixedRate = 86400000)
     public void updateRepositories() {
         GitHubRepo[] repos = restTemplate.getForObject("https://api.github.com/users/lachierigg05/repos", GitHubRepo[].class);
-        for (GitHubRepo r : repos) {
-            System.out.println(r.getName());
-        }
-
+        
         if (repos != null) {
-            gitHubRepoRepository.saveAll(Arrays.asList(repos));
+            for (GitHubRepo r : repos) {
+                System.out.println(r.getName());
+                gitHubRepoRepository.saveAll(Arrays.asList(repos));
+            }
         }
     }
 }
