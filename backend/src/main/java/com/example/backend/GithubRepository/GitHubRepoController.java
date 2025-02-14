@@ -7,12 +7,10 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 /**
- * REST Controller for handling GitHub GithubRepository operations.
- * Provides endpoints for retrieving GitHub GithubRepository information.
+ * REST Controller for handling GithubRepository operations.
+ * Provides endpoints for retrieving GithubRepository information.
  *
  * @author Lachie Rigg
- * @version 1.0
- * @since 1.0
  */
 @CrossOrigin(origins = "http://localhost:5173")
 @RestController
@@ -23,7 +21,7 @@ public class GitHubRepoController {
     /**
      * Constructs a new GitHubRepoController with the required service.
      *
-     * @param gitHubService the service to handle GitHub GithubRepository operations
+     * @param gitHubService the service to handle GithubRepository operations
      */
     public GitHubRepoController(GitHubRepoService gitHubService) {
         this.gitHubService = gitHubService;

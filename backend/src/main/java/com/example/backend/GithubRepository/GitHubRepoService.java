@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * Service class implementing business logic for GitHubRepos.
  * Dynamically adds and removes repos from the database utilising
- * the GitHub API. 
+ * the GitHub API.
  *
  * @author Lachie Rigg
  */
