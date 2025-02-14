@@ -10,8 +10,6 @@ import org.springframework.lang.NonNull;
  * Maps to the "Repositories" table in the database.
  *
  * @author Lachie Rigg
- * @version 1.0
- * @since 1.0
  */
 @Entity
 @Table(name="Repositories")

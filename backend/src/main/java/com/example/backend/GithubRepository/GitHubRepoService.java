@@ -9,6 +9,14 @@ import org.springframework.web.client.RestClient;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Service class implementing business logic for GitHubRepos.
+ * Dynamically adds and removes repos from the database utilising
+ * the GitHub API. 
+ *
+ * @author Lachie Rigg
+ */
+
 @Service
 public class GitHubRepoService {
     private final GitHubRepoRepository gitHubRepoRepository;
@@ -65,7 +73,7 @@ public class GitHubRepoService {
 
                 // If the repository is not found on GitHub anymore, delete it from the database
                 if (!existsOnGithub) {
-                    logger.info("Repository {} no longer exists on GitHub. Removing from database.", existingRepo.getName());
+                    logger.info("Repository {} no longer exists on users GitHub profile. Removing from database.", existingRepo.getName());
                     gitHubRepoRepository.delete(existingRepo);
                 }
             }
