@@ -1,6 +1,5 @@
-package com.example.backend.repository;
+package com.example.backend.GithubRepository;
 
-import com.example.backend.BackendApplication;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -35,7 +34,7 @@ public class GitHubRepoService {
 
     /**
      * Method to update the database with the current repos 
-     * on the users github account. 
+     * on the users Github account.
      * 
      */
     public void updateRepositories() {
@@ -47,7 +46,7 @@ public class GitHubRepoService {
         if (repos != null) {
             logger.info("Repositories found - pulling repositories from Github");
             for (GitHubRepo r : repos) {
-                System.out.println("Successfully retrieved repository " + r.getID() + " - " + r.getName() + ".");
+                System.out.println("Successfully retrieved GithubRepository " + r.getID() + " - " + r.getName() + ".");
                 gitHubRepoRepository.saveAll(Arrays.asList(repos));
             }
         }

@@ -1,4 +1,4 @@
-package com.example.backend.repository;
+package com.example.backend.GithubRepository;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 /**
- * REST Controller for handling GitHub repository operations.
- * Provides endpoints for retrieving GitHub repository information.
+ * REST Controller for handling GitHub GithubRepository operations.
+ * Provides endpoints for retrieving GitHub GithubRepository information.
  *
  * @author Lachie Rigg
  * @version 1.0
@@ -15,13 +15,13 @@ import java.util.List;
  */
 @RestController
 public class GitHubRepoController {
-    /** Service layer for GitHub repository operations */
+    /** Service layer for GithubRepository operations */
     private final GitHubRepoService gitHubService;
 
     /**
      * Constructs a new GitHubRepoController with the required service.
      *
-     * @param gitHubService the service to handle GitHub repository operations
+     * @param gitHubService the service to handle GitHub GithubRepository operations
      */
     public GitHubRepoController(GitHubRepoService gitHubService) {
         this.gitHubService = gitHubService;

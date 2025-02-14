@@ -1,4 +1,4 @@
-package com.example.backend.repository;
+package com.example.backend.GithubRepository;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -6,7 +6,7 @@ import jakarta.persistence.Table;
 import org.springframework.lang.NonNull;
 
 /**
- * Entity class representing a GitHub repository.
+ * Entity class representing a GitHub GithubRepository.
  * Maps to the "Repositories" table in the database.
  *
  * @author Lachie Rigg
@@ -16,23 +16,23 @@ import org.springframework.lang.NonNull;
 @Entity
 @Table(name="Repositories")
 public class GitHubRepo {
-    /** Unique identifier for the repository
-     * Maps to Github's repository ID. 
+    /** Unique identifier for the GithubRepository
+     * Maps to Github's GithubRepository ID.
      */
     @Id
     @NonNull
     private String id;
     
     /** 
-     * Name of the repository
+     * Name of the GithubRepository
      * This is the name of the repo as it appears on Github 
      */
     @NonNull
     private String name;
     
     /** 
-     * Description of the repository
-     * Can be null if the repository has no description. 
+     * Description of the GithubRepository
+     * Can be null if the GithubRepository has no description.
      */
     private String description;
 
@@ -54,8 +54,8 @@ public class GitHubRepo {
     }
 
     /**
-     * Gets the repository's unique identifier
-     * @return String id - the repository ID
+     * Gets the GithubRepository's unique identifier
+     * @return String id - the GithubRepository ID
      */
     @NonNull
      public String getID() { 
@@ -63,8 +63,8 @@ public class GitHubRepo {
     }
 
     /**
-     * Gets the repository name
-     * @return String name - the repository name
+     * Gets the GithubRepository name
+     * @return String name - the GithubRepository name
      */
     @NonNull
     public String getName() {
@@ -72,8 +72,8 @@ public class GitHubRepo {
     }
 
     /**
-     * Gets the repository description
-     * @return the repository description
+     * Gets the GithubRepository description
+     * @return the GithubRepository description
      */
     public String getDescription() {
         return description;
