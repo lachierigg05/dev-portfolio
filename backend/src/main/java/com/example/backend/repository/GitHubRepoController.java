@@ -1,14 +1,15 @@
-package com.lachierigg.backend.repository;
+package com.example.backend.repository;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
 import java.util.List;
 
 /**
  * REST Controller for handling GitHub repository operations.
  * Provides endpoints for retrieving GitHub repository information.
  *
- * @author Your Name
+ * @author Lachie Rigg
  * @version 1.0
  * @since 1.0
  */

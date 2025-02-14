@@ -1,4 +1,4 @@
-package com.lachierigg.backend.repository;
+package com.example.backend.repository;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -9,7 +9,7 @@ import org.springframework.lang.NonNull;
  * Entity class representing a GitHub repository.
  * Maps to the "Repositories" table in the database.
  *
- * @author Your Name
+ * @author Lachie Rigg
  * @version 1.0
  * @since 1.0
  */

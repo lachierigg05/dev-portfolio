@@ -1,9 +1,10 @@
 package com.example.backend.repository;
 
+import com.example.backend.BackendApplication;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
-
-import com.example.backend.repository.GitHubRepo;
 
 import java.util.Arrays;
 import java.util.List;
@@ -12,7 +13,8 @@ import java.util.List;
 public class GitHubRepoService {
     private final GitHubRepoRepository gitHubRepoRepository;
     private final RestClient restClient;
-    
+    private static final Logger logger = LoggerFactory.getLogger(GitHubRepoService.class);
+
     private static final String GITHUB_USERNAME = "lachierigg05";
     private static final String GITHUB_API_URL = "https://api.github.com/users/" + GITHUB_USERNAME + "/repos";
     
@@ -22,10 +24,10 @@ public class GitHubRepoService {
     }
 
     /**
-     * Simple methods to return the list of github repos 
+     * Simple methods to return the list of Github repos
      * stored in the database 
      * 
-     * @return list of github repos from the user
+     * @return list of Github repos from the user
      */
     public List<GitHubRepo> getAllRepositories() {
         return gitHubRepoRepository.findAll();
@@ -43,8 +45,9 @@ public class GitHubRepoService {
                 .body(GitHubRepo[].class);
             
         if (repos != null) {
+            logger.info("Repositories found - pulling repositories from Github");
             for (GitHubRepo r : repos) {
-                System.out.println(r.getName());
+                System.out.println("Successfully retrieved repository " + r.getID() + " - " + r.getName() + ".");
                 gitHubRepoRepository.saveAll(Arrays.asList(repos));
             }
         }

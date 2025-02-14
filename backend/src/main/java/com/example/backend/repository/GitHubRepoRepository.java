@@ -1,4 +1,4 @@
-package com.lachierigg.backend.repository;
+package com.example.backend.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

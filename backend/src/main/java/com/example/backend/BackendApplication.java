@@ -1,6 +1,6 @@
-package com.lachierigg.backend;
+package com.example.backend;
 
-import com.lachierigg.backend.repository.GitHubRepoService;
+import com.example.backend.repository.GitHubRepoService;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
