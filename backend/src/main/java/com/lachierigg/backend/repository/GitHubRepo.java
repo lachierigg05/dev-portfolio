@@ -1,4 +1,4 @@
-package com.example.backend.repository;
+package com.lachierigg.backend.repository;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

@@ -1,6 +1,7 @@
-package com.example.backend;
+package com.lachierigg.backend;
 
-import com.example.backend.repository.GitHubRepoService;
+import com.lachierigg.backend.repository.GitHubRepoService;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -15,22 +16,15 @@ import org.springframework.context.annotation.Profile;
 @SpringBootApplication
 public class BackendApplication {
 	private final GitHubRepoService gitHubRepoService;
-	private static final Logger logger = LoggerFactory.getLogger(BackendApplication.class);
 
-	/**
-	 * Constructor for backend application
-	 * @param gitHubRepoService the service class for the gitHubRepo
-	 */
 	public BackendApplication(GitHubRepoService gitHubRepoService) {
 		this.gitHubRepoService = gitHubRepoService;
 	}
+	private static final Logger logger = LoggerFactory.getLogger(BackendApplication.class);
 
-	/**
-	 * Entry point for the application
-	 */
-    public static void main(String[] args) {
-        SpringApplication.run(BackendApplication.class, args);
-    }
+	public static void main(String[] args) {
+		SpringApplication.run(BackendApplication.class, args);
+	}
 
 	/**
 	 * Bean to update repositories from the Github api to the database

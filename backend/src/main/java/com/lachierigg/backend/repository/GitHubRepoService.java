@@ -3,6 +3,8 @@ package com.example.backend.repository;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
 
+import com.example.backend.repository.GitHubRepo;
+
 import java.util.Arrays;
 import java.util.List;
 
