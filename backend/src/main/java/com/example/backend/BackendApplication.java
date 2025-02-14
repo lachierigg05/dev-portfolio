@@ -3,14 +3,11 @@ package com.example.backend;
 import com.example.backend.repository.GitHubRepoService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Profile;
-import org.springframework.web.client.RestTemplate;
 
 /**
  * The main spring boot application class
@@ -24,7 +21,6 @@ public class BackendApplication {
 	 * Constructor for backend application
 	 * @param gitHubRepoService the service class for the gitHubRepo
 	 */
-	@Autowired
 	public BackendApplication(GitHubRepoService gitHubRepoService) {
 		this.gitHubRepoService = gitHubRepoService;
 	}
@@ -35,18 +31,6 @@ public class BackendApplication {
     public static void main(String[] args) {
         SpringApplication.run(BackendApplication.class, args);
     }
-
-	/**
-	 * Rest template bean to be used to make rest calls
-	 * within a class
-	 *
-	 * @param builder builder class for a rest template
-	 * @return rest template to make rest calls
-	 */
-	@Bean
-	public RestTemplate restTemplate(RestTemplateBuilder builder) {
-		return builder.build();
-	}
 
 	/**
 	 * Bean to update repositories from the Github api to the database
@@ -67,5 +51,4 @@ public class BackendApplication {
 			}
 		};
 	}
-
 }
