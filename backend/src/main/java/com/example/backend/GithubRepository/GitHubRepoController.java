@@ -1,5 +1,6 @@
 package com.example.backend.GithubRepository;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,6 +14,7 @@ import java.util.List;
  * @version 1.0
  * @since 1.0
  */
+@CrossOrigin(origins = "http://localhost:5173")
 @RestController
 public class GitHubRepoController {
     /** Service layer for GithubRepository operations */
