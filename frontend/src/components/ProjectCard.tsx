@@ -5,6 +5,7 @@ interface Props {
     des?: string;
     imgSrc: string;
 }
+
 const ProjectCard: React.FC<Props> = ({title, des = "No Description", imgSrc}) => {
     return (
         <div className='m-8 h-1/2 w-7/8 text-white flex flex-col items-center border-white border-2 bg-gray-800'>

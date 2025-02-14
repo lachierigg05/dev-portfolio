@@ -1,0 +1,5 @@
+{
+  "java.checkstyle.version": "10.21.0",
+  "java.compile.nullAnalysis.mode": "automatic",
+  "java.configuration.updateBuildConfiguration": "interactive"
+}
